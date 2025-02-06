@@ -1,6 +1,11 @@
-#This is the code for the first task using python
+###Topics Covered: Coding Syntax, Data types and Data Structures
+Ogunoye_detail = {
+    "Name": "Ogunoye Blessing",
+    "Slack username" : "toibukun",
+    "Email": "ogunoyeblessingtoyosi.com",
+    "Hobby": "Sunset Photography",
+    "Country": "Nigeria",
+    "Discipline": "Medicine and Surgery",
+    "Preferred programming language": "Python"
 
-ogunoye_detail = {
-"name" = "Ogunoye Blessing Toyosi"
-"slack username" = "toibukun"
 }
