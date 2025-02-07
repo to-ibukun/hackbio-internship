@@ -1,11 +1,22 @@
-###Topics Covered: Coding Syntax, Data types and Data Structures
+#start coding... 
+#Topics Covered: Coding Syntax, Data types and Data Structures
 Ogunoye_detail = {
     "Name": "Ogunoye Blessing",
-    "Slack username" : "toibukun",
+    "Slack Username" : "toibukun",
     "Email": "ogunoyeblessingtoyosi.com",
     "Hobby": "Sunset Photography",
     "Country": "Nigeria",
     "Discipline": "Medicine and Surgery",
-    "Preferred programming language": "Python"
-
+    "Preferred programming language": "Python",
+    "Github": "https://github.com/to-ibukun"
 }
+print("\n Ogunoye Detail ")
+print("Name:", Ogunoye_detail["Name"])
+print("Slack Username:", Ogunoye_detail["Slack Username"])
+print("Email:", Ogunoye_detail["Email"])
+print("Hobby:", Ogunoye_detail["Hobby"])
+print("Country:", Ogunoye_detail["Country"])
+print("Discipline:", Ogunoye_detail["Discipline"])
+print("Preferred programming language:", Ogunoye_detail["Preferred programming language"])
+print("Github:", Ogunoye_detail["Github"])
+
