@@ -1,0 +1,26 @@
+# Proline team information using dictionaries-python
+# Organizing the information using a dictionary of dictionaries
+team_members = {
+    'CG': {'Slack Username': 'CG', 'Email': 'charisobakpolo@gmail.com', 'Hobby': 'Music', 'Country': 'Nigeria', 'Discipline': 'Physiology', 'Preferred Programming Language': 'Python'},
+    'TOIBUKUN': {'Slack Username': 'toibukun', 'Email': 'ogunoyeblessingtoyosi@gmail.com', 'Hobby': 'Sunset Photography', 'Country': 'Nigeria', 'Discipline': 'Medicine and Surgery', 'Preferred Programming Language': 'Python'},
+    'Fatemah': {'Slack Username': 'Fatemah Alsolaiman', 'Email': 'fatemah.solaiman@gmail.com', 'Hobby': 'Reading', 'Country': 'Saudi Arabia', 'Discipline': 'Biology', 'Preferred Programming Language': 'Python'},
+    'Funmilayo': {'Slack Username': 'Funmilayo', 'Email': 'ligalifunmilayo@gmail.com', 'Hobby': 'Cooking', 'Country': 'Nigeria', 'Discipline': 'Biochemistry', 'Preferred Programming Language': 'Python'}
+}
+
+# Saving the formatted strings to variables
+CG_info = f"Name: Obakpolo Charis-Grace,\n Slack Username: {team_members['CG']['Slack Username']},\n Email: {team_members['CG']['Email']},\n Hobby: {team_members['CG']['Hobby']},\n Country: {team_members['CG']['Country']},\n Discipline: {team_members['CG']['Discipline']},\n Preferred Programming Language: {team_members['CG']['Preferred Programming Language']}"
+TOIBUKUN_info = f"Name: Ogunoye Blessing,\n Slack Username: {team_members['TOIBUKUN']['Slack Username']},\n Email: {team_members['TOIBUKUN']['Email']},\n Hobby: {team_members['TOIBUKUN']['Hobby']},\n Country: {team_members['TOIBUKUN']['Country']},\n Discipline: {team_members['TOIBUKUN']['Discipline']},\n Preferred Programming Language: {team_members['TOIBUKUN']['Preferred Programming Language']}"
+Fatemah_info = f"Name: Fatemah Alsolaiman,\n Slack Username: {team_members['Fatemah']['Slack Username']},\n Email: {team_members['Fatemah']['Email']},\n Hobby: {team_members['Fatemah']['Hobby']},\n Country: {team_members['Fatemah']['Country']},\n Discipline: {team_members['Fatemah']['Discipline']},\n Preferred Programming Language: {team_members['Fatemah']['Preferred Programming Language']}"
+Funmilayo_info = f"Name: Funmilayo Ligali,\n Slack Username: {team_members['Funmilayo']['Slack Username']},\n Email: {team_members['Funmilayo']['Email']},\n Hobby: {team_members['Funmilayo']['Hobby']},\n Country: {team_members['Funmilayo']['Country']},\n Discipline: {team_members['Funmilayo']['Discipline']},\n Preferred Programming Language: {team_members['Funmilayo']['Preferred Programming Language']}"
+
+# Merging into one print function
+print(f"Team Members Information:\n 1. {CG_info}\n\n 2.{TOIBUKUN_info}\n\n 3.{Fatemah_info}\n\n 4.{Funmilayo_info}")
+
+# github profile for team
+# Ogunoye Blessing's Github page: https://github.com/to-ibukun
+# Obakpolo Charis-Grace Github page: https://github.com/CeeGeeObas
+# Funmilayo Ligali's Github page: https://github.com/Christianah001
+# Fatemah Alsolaiman's Github page: https://github.com/92Faty
+
+# LinkedIn link for the posted video
+# https://www.linkedin.com/posts/charis-grace-obakpolo-327492216_hackbio-codingforbio-stage0-activity-7294008840801468416-k8tj/?utm_source=share&utm_medium=member_android
