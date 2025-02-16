@@ -1,0 +1,58 @@
+import random
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Second function, Logistic Growth Function
+def logistic_growth_curve(N_initial, r, K, time_steps=100):
+    """Simulates logistic growth with randomized lag and exponential phase durations."""
+    lag_phase_length = random.randint(1, 10)  # Random lag phase length
+    exponential_phase_length = random.randint(15, 20)  # Random exponential phase length
+
+    population = []
+
+    for t in range(time_steps):
+        # Lag phase
+        if t < lag_phase_length:
+            N_t = N_initial
+        # Exponential phase
+        elif t < (lag_phase_length + exponential_phase_length):
+            N_t = N_initial * np.exp(r * (t - lag_phase_length))
+        # Logistic phase
+        else:
+            N_t = K / (1 + ((K - N_initial) / N_initial) * np.exp(-r * (t - lag_phase_length - exponential_phase_length)))
+
+        population.append(N_t)
+
+    return pd.DataFrame({"Time": range(time_steps), "Population": population,
+                         "Lag_Phase": [lag_phase_length] * time_steps,
+                         "Exp_Phase": [exponential_phase_length] * time_steps})
+
+# Function to Generate Multiple Growth Curves
+def generate_growth_curves(num_curves=100, time_steps=100):
+    """Generates multiple logistic growth curves with different random lag and exponential phases."""
+    all_curves = []
+
+    for i in range(num_curves):
+        df = logistic_growth_curve(N_initial=10, r=0.1, K=1000, time_steps=time_steps)
+        df["Curve_ID"] = i
+        all_curves.append(df)
+
+    return pd.concat(all_curves, ignore_index=True)
+
+#  Now we can generate 100 growth curves without error
+df_all_growth = generate_growth_curves()
+print(df_all_growth.head())
+
+# Plot a few random growth curves
+plt.figure(figsize=(10,5))
+for i in np.random.choice(df_all_growth["Curve_ID"].unique(), 5, replace=False):
+    subset = df_all_growth[df_all_growth["Curve_ID"] == i]
+    plt.plot(subset["Time"], subset["Population"], label=f"Curve {i}")
+
+plt.xlabel("Time")
+plt.ylabel("Population Size")
+plt.title("Random Logistic Growth Curves")
+plt.legend()
+plt.grid()
+plt.show()
